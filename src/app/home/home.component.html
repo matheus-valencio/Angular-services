@@ -5,3 +5,7 @@
 <p>
   GitHub: <a href="https://github.com/matheus-valencio">Matheus Valencio</a>
 </p>
+<h3>Temporizador</h3>
+{{ timer.getCount() }}s
+<button (click)="timer.start(1000)">Iniciar</button>
+<button (click)="timer.stop()">Parar</button>

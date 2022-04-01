@@ -1,6 +1,5 @@
 <h1>ServicesDemoApp</h1>
-<a [routerLink]="['']">HOME</a>
-<a [routerLink]="['tasks']">TASKS</a>
-<a [routerLink]="['log']">LOG</a>
+<a [routerLink]="['']">HOME</a> | <a [routerLink]="['tasks']">TASKS</a> |
+<a [routerLink]="['log']">LOG</a> | {{ timer.getCount() }}s
 <hr />
 <router-outlet></router-outlet>
