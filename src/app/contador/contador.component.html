@@ -1,0 +1,8 @@
+<h3>Contador</h3>
+<label for="intervalo">Intervalo do Contador em segundos</label><Br />
+<input type="number" id="intervalo" #input /><Br />
+
+<button (click)="timer.start(input.value)">Iniciar</button>
+<button (click)="timer.stop()">Parar</button>
+
+<div>{{ timer.getCount() }}s</div>
