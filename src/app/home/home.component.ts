@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggerService } from '../logger.service';
 import { TimerService } from '../timer.service';
 
 @Component({
@@ -7,8 +8,9 @@ import { TimerService } from '../timer.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(public timer: TimerService) {
+  constructor(public timer: TimerService, public logger: LoggerService) {
     this.timer.start(1000);
+    this.logger.add('HomeComponent constructed');
   }
 
   ngOnInit() {}
