@@ -7,8 +7,6 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { TimerService } from './timer.service';
-import { TasksService } from './tasks.service';
-import { LoggerService } from './logger.service';
 import { DisciplinasComponent } from './disciplinas/disciplinas.component';
 import { ContadorComponent } from './contador/contador.component';
 import { DisciplinasService } from './disciplinas.service';

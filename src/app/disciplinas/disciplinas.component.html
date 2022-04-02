@@ -1,14 +1,17 @@
 <h2>Disciplinas</h2>
 <h2>TAREFAS</h2>
 <div>
-  <input #title type="text" />
-  <input #dia type="text" />
-  <input #hora type="text" />
+  <label for="title">Disciplina</label><br />
+  <input #title id="title" type="text" /><br />
+  <label for="dia">Dia</label><br />
+  <input #dia type="text" id="dia" /><br />
+  <label for="hora">Horário</label><br />
+  <input #hora type="text" id="hora" /><br />
   <button (click)="disciplina.add(title.value, dia.value, hora.value)">
-    +
+    Adicionar
   </button>
 </div>
-
+<hr />
 <table class="table table-bordered">
   <thead>
     <tr>

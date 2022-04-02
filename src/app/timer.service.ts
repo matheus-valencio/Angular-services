@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
-import { LoggerService } from './logger.service';
 
 @Injectable()
 export class TimerService {
   private timer: any;
   private counter = 0;
 
-  constructor(public logger: LoggerService) {
-    this.logger.add('TimerService constructed');
-  }
+  constructor() {}
 
   start(ms: any) {
     if (!this.timer) {
