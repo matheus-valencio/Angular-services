@@ -11,17 +11,21 @@ export class TimerService {
   }
 
   start(ms: any) {
-    if (this.timer) {
+    if (!this.timer) {
       this.timer = setInterval(() => {
         this.counter++;
       }, ms * 1000);
     }
   }
   stop() {
-    if (!this.timer) {
+    if (this.timer) {
       clearInterval(this.timer);
       this.timer = null;
     }
+  }
+  clear() {
+    this.timer = null;
+    this.counter = 0;
   }
   getCount() {
     return this.counter;

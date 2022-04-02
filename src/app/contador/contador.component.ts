@@ -7,9 +7,7 @@ import { TimerService } from '../timer.service';
   styleUrls: ['./contador.component.css'],
 })
 export class ContadorComponent implements OnInit {
-  constructor(public timer: TimerService) {
-    this.timer.start(1000);
-  }
+  constructor(public timer: TimerService) {}
 
   ngOnInit() {}
 }
