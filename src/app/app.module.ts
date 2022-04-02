@@ -13,6 +13,7 @@ import { TasksService } from './tasks.service';
 import { LoggerService } from './logger.service';
 import { DisciplinasComponent } from './disciplinas/disciplinas.component';
 import { ContadorComponent } from './contador/contador.component';
+import { DisciplinasService } from './disciplinas.service';
 
 @NgModule({
   imports: [
@@ -36,6 +37,6 @@ import { ContadorComponent } from './contador/contador.component';
     ContadorComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [TimerService, TasksService, LoggerService],
+  providers: [TimerService, TasksService, LoggerService, DisciplinasService],
 })
 export class AppModule {}

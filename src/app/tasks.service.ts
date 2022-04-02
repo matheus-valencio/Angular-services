@@ -3,11 +3,12 @@ import { LoggerService } from './logger.service';
 
 interface Task {
   title: string;
+  dia: string;
 }
 
 @Injectable()
 export class TasksService {
-  list: Array<Task> = [];
+  list: Array<Task> = [{ title: 'task', dia: 'segunda' }];
   constructor(public logger: LoggerService) {
     this.logger.add('TasksService constructed');
   }
@@ -15,8 +16,8 @@ export class TasksService {
   getList() {
     return this.list;
   }
-  add(title: string) {
-    this.list.push({ title });
+  add(title: string, dia: string) {
+    this.list.push({ title, dia });
   }
   remove(index: number) {
     this.list.splice(index, 1);
