@@ -4,25 +4,25 @@
   <input #title type="text" />
   <input #dia type="text" />
   <input #hora type="text" />
-  <button>+</button>
+  <button (click)="disciplina.add(title.value, dia.value, hora.value)">
+    +
+  </button>
 </div>
-<table>
-  <th>
-    Disciplina
+
+<table class="table table-bordered">
+  <thead>
     <tr>
-      teste
+      <th scope="col">Matéria</th>
+      <th scope="col">Dia</th>
+      <th scope="col">Horário</th>
     </tr>
-  </th>
-  <th>
-    Dia
-    <tr>
-      teste
+  </thead>
+  <tbody>
+    <tr *ngFor="let materia of disciplina.getLista(); index as i">
+      <td>{{ materia.title }}</td>
+      <td>{{ materia.dia }}</td>
+      <td>{{ materia.hora }}</td>
+      <td><button (click)="disciplina.remove(i)">X</button></td>
     </tr>
-  </th>
-  <th>
-    Horário
-    <tr>
-      teste
-    </tr>
-  </th>
+  </tbody>
 </table>
